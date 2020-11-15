@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <!-- Header /-->
     <About />
     <EdCerts />
     <Skills />
@@ -14,7 +14,7 @@
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import EdCerts from "@/components/EdCerts";
-import Header from "@/components/Header";
+//import Header from "@/components/Header";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 
@@ -24,7 +24,7 @@ export default {
     About,
     Contact,
     EdCerts,
-    Header,
+    //Header,
     Projects,
     Skills
   }
@@ -36,12 +36,14 @@ export default {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: left;
     color: #2c3e50;
-    margin-right: 25%;
+    min-width: 600px;
+    max-width: 1000px;
+    margin: auto;
   }
 
-  h1 {
-    margin-left: 40%;
+  h2 {
+    text-align: center;
   }
+
 </style>

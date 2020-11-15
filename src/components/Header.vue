@@ -1,11 +1,11 @@
 <template>
   <div class="header">
-    <h2>About</h2>
-    <h2>School</h2>
-    <h2>Certs</h2>
-    <h2>Skills</h2>
-    <h2>Projects</h2>
-    <h2>Contact</h2>
+    <h3>About</h3>
+    <h3>School</h3>
+    <h3>Certs</h3>
+    <h3>Skills</h3>
+    <h3>Projects</h3>
+    <h3>Contact</h3>
   </div>
 </template>
 
@@ -23,7 +23,7 @@ name: "Header"
   text-align: right;
   position: static;
 }
-h2{
+h3 {
   padding-top: 7px;
   padding-bottom: 5px;
   padding-right: 10px;
@@ -34,7 +34,7 @@ h2{
   margin-bottom: 0;
   margin-top: 0;
 }
-h2:hover{
+h3:hover {
   background: #2c3e50;
   color: #fff;
 }

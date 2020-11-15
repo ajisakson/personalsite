@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Let's Get In Touch!</h1>
+    <h2>Let's Get In Touch!</h2>
   </div>
 </template>
 
