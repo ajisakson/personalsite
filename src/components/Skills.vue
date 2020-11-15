@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Here's What I Can Do</h2>
-    <div class="skills-list" style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div class="skills-list">
       <div class="skill-item" v-for="item in set" v-bind:key="item">
         {{ item }}
       </div>
@@ -21,6 +21,11 @@ export default {
 </script>
 
 <style scoped>
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .skill-item {
     background: darkcyan;
     color: white;

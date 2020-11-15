@@ -1,8 +1,8 @@
 <template>
  <div>
    <h2>Education</h2>
-   <div class="school-badge" style="display: flex; flex-wrap: wrap; justify-content: center;">
-     <div v-for="school in schools" v-bind:key="school.id" style="flex: 0 1 275px;" >
+   <div class="school-list">
+     <div class="school-badge" v-for="school in schools" v-bind:key="school.id">
        <p style="text-align: center; justify-content: center;"><i>Logo Here</i></p>
        <p>{{ school.name }}</p>
        <p>{{ school.spec }}</p>
@@ -10,8 +10,8 @@
      </div>
    </div>
    <h2>Certifications</h2>
-   <div class="cert-badge" style="display: flex; flex-wrap: wrap; justify-content: center;">
-     <div  v-for="cert in certs" v-bind:key="cert.id" style="flex: 0 1 250px;">
+   <div class="cert-list">
+     <div class="cert-badge" v-for="cert in certs" v-bind:key="cert.id">
        <p style="text-align: center; justify-content: center;"><i>Logo Here</i></p>
        <p>{{ cert.org }} {{ cert.name }}</p>
        <p>{{ cert.date }}</p>
@@ -93,5 +93,17 @@ export default {
 </script>
 
 <style scoped>
+  .school-list {
+    display: flex; flex-wrap: wrap; justify-content: center;
+  }
+  .school-badge {
+    flex: 0 1 275px;
+  }
+  .cert-list {
+    display: flex; flex-wrap: wrap; justify-content: center;
+  }
+  .cert-badge {
+    flex: 0 1 250px;
+  }
 
 </style>
