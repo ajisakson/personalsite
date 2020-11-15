@@ -3,7 +3,7 @@
    <h2>Education</h2>
    <div class="school-list">
      <div class="school-badge" v-for="school in schools" v-bind:key="school.id">
-       <p style="text-align: center; justify-content: center;"><i>Logo Here</i></p>
+       <img :src="school.logo" alt="School Logo"/>
        <p>{{ school.name }}</p>
        <p>{{ school.spec }}</p>
        <p>{{ school.dates }}</p>
@@ -12,9 +12,9 @@
    <h2>Certifications</h2>
    <div class="cert-list">
      <div class="cert-badge" v-for="cert in certs" v-bind:key="cert.id">
-       <p style="text-align: center; justify-content: center;"><i>Logo Here</i></p>
-       <p>{{ cert.org }} {{ cert.name }}</p>
-       <p>{{ cert.date }}</p>
+       <img :src="cert.logo" alt="Certification Logo"/>
+       <p>{{ cert.org }} {{ cert.name }}
+       <br/>{{ cert.date }}</p>
      </div>
    </div>
  </div>
@@ -32,14 +32,14 @@ export default {
           name: 'Western Governors University',
           dates: 'September 2018 - November 2020',
           spec: 'Bachelor of Science, Software Development',
-          logo: 'public/images/WGU-MarketingLogo_Natl_RGB_Owl_NoTag_4-1-2017.jpg'
+          logo: require('@/assets/images/WGU-MarketingLogo_Natl_RGB_Owl_NoTag_4-1-2017.jpg')
         },
         {
           id: 2,
           name: 'North Idaho College',
           dates: 'August 2016 - May 2018',
           spec: 'Associate of Arts, General Studies',
-          logo: 'public/images/NIClogoStacked.png'
+          logo: require('@/assets/images/NIClogoStacked.png')
         }
       ],
       certs: [
@@ -48,28 +48,28 @@ export default {
           org: 'CompTIA',
           name: 'A+',
           date: 'September 25, 2019',
-          logo: 'public/images/APlusLogo.png'
+          logo: require('@/assets/images/APlusLogo.png')
         },
         {
           id: 2,
           org: 'CompTIA',
           name: 'Project+',
           date: 'April 19, 2019',
-          logo: 'public/images/ProjectPlusLogo.png'
+          logo: require('@/assets/images/ProjectPlusLogo.png')
         },
         {
           id: 3,
           org: 'CIW',
           name: 'Advanced HTML5 & CSS3 Specialist',
           date: '',
-          logo: 'public/images/CIWhtmlcss.jpg'
+          logo: require('@/assets/images/CIWhtmlcss.jpg')
         },
         {
           id: 4,
           org: 'CIW',
           name: 'User Interface Designer',
           date: '',
-          logo: 'public/images/CIWuidesign.jpg'
+          logo: require('@/assets/images/CIWuidesign.jpg')
         }
         ,
         {
@@ -77,14 +77,14 @@ export default {
           org: 'ITIL',
           name: 'Foundation v3',
           date: '',
-          logo: 'public/images/itilv3.png'
+          logo: require('@/assets/images/itilv3.png')
         },
         {
           id: 6,
           org: 'MTA',
           name: 'HTML5 Application Developer Fundamentals',
           date: '',
-          logo: 'public/images/MTAhtmlappdev.png'
+          logo: require('@/assets/images/MTAhtmlappdev.png')
         }
       ]
     }
@@ -98,12 +98,20 @@ export default {
   }
   .school-badge {
     flex: 0 1 275px;
+    margin: 20px;
+  }
+  .school-badge img {
+    width: 275px;
   }
   .cert-list {
     display: flex; flex-wrap: wrap; justify-content: center;
   }
   .cert-badge {
     flex: 0 1 250px;
+    text-align: center;
+  }
+  .cert-badge img {
+    height: 150px;
   }
 
 </style>
