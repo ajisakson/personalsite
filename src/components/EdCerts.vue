@@ -4,9 +4,9 @@
    <div class="school-list">
      <div class="school-badge" v-for="school in schools" v-bind:key="school.id">
        <img :src="school.logo" alt="School Logo"/>
-       <p>{{ school.name }}</p>
-       <p>{{ school.spec }}</p>
-       <p>{{ school.dates }}</p>
+       <p>{{ school.name }}
+       <br/>{{ school.spec }}
+       <br/>{{ school.dates }}</p>
      </div>
    </div>
    <h2>Certifications</h2>
@@ -31,14 +31,14 @@ export default {
           id: 1,
           name: 'Western Governors University',
           dates: 'September 2018 - November 2020',
-          spec: 'Bachelor of Science, Software Development',
+          spec: 'B.S., Software Development',
           logo: require('@/assets/images/WGU-MarketingLogo_Natl_RGB_Owl_NoTag_4-1-2017.jpg')
         },
         {
           id: 2,
           name: 'North Idaho College',
           dates: 'August 2016 - May 2018',
-          spec: 'Associate of Arts, General Studies',
+          spec: 'A.A., General Studies',
           logo: require('@/assets/images/NIClogoStacked.png')
         }
       ],
@@ -97,11 +97,11 @@ export default {
     display: flex; flex-wrap: wrap; justify-content: center;
   }
   .school-badge {
-    flex: 0 1 275px;
+    flex: 0 1 290px;
     margin: 20px;
   }
   .school-badge img {
-    width: 275px;
+    height: 100px;
   }
   .cert-list {
     display: flex; flex-wrap: wrap; justify-content: center;
@@ -111,7 +111,7 @@ export default {
     text-align: center;
   }
   .cert-badge img {
-    height: 150px;
+    height: 125px;
   }
 
 </style>

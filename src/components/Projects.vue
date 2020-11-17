@@ -3,10 +3,17 @@
     <h2>Some Stuff I Made</h2>
     <div class="portfolio">
       <div class="project" v-for="project in projects" v-bind:key="project.id">
-        <p style="justify-content: center; text-align: center;"><i>Preview Here</i></p>
-        <p style="text-align: center;">{{ project.title }}</p>
+        <video muted controls autoplay loop style="width: 300px;">
+          <source :src="project.preview"
+                  type="video/webm">
+        </video>
         <p>{{ project.description }}</p>
-        <p>{{ project.link }}</p>
+        <button>
+          <a :href="project.link">
+            <img :src="require('@/assets/images/GitHub-Mark-32px.png')" alt="Github Logo"/>
+            <div class="vl"></div><div class="project-title">{{ project.title }}</div>
+          </a>
+        </button>
       </div>
     </div>
   </div>
@@ -30,7 +37,7 @@ name: "Projects",
           title: 'WGUTermScheduler',
           description: 'An Android app for scheduling terms, classes, and adding notes for school using Android API 29, Java, and Gradle for package management. Developed using Android Studio and a standard local SQLite database implementation.',
           link: 'https://github.com/ajisakson/WGUScheduler',
-          preview: ''
+          preview: require('@/assets/video/WGUSchedulerEx.webm')
         },
         {
           id: 3,
@@ -54,7 +61,36 @@ name: "Projects",
 
 .project{
   flex: 0 1 300px;
-  margin: 0 20px 0 20px;
+  margin: 0 20px 20px 20px;
 }
 
+button {
+  height: 24px;
+  box-shadow: 1px 1px #bbb;
+}
+button a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+button img {
+  float: left;
+  height: 16px;
+}
+
+.vl {
+  border-left: 1px solid #aaa;
+  height: 18px;
+  float: left;
+  margin-left: 6px;
+  margin-top: 0;
+  margin-bottom: 2px;
+  margin-right: 6px;
+}
+
+.project-title {
+  margin-top: 1px;
+  margin-bottom: 0;
+  float: right;
+}
 </style>
