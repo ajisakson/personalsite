@@ -97,21 +97,20 @@ export default {
     display: flex; flex-wrap: wrap; justify-content: center;
   }
   .school-badge {
-    flex: 0 1 290px;
-    margin: 20px;
+    flex: 0 1 300px;
   }
   .school-badge img {
-    height: 100px;
+    width: 300px;
   }
   .cert-list {
     display: flex; flex-wrap: wrap; justify-content: center;
   }
   .cert-badge {
-    flex: 0 1 250px;
+    flex: 0 1 300px;
     text-align: center;
   }
   .cert-badge img {
-    height: 125px;
+    height: 150px;
   }
 
 </style>

@@ -1,9 +1,11 @@
 <template>
   <div>
-    <h2>Some Stuff I Made</h2>
+    <h2>Projects</h2>
+
     <div class="portfolio">
+      <p style="width: 80%"><i>Disclaimer: I'm neither a performance artist nor a video editor so please excuse my sloppiness on the previews.</i></p>
       <div class="project" v-for="project in projects" v-bind:key="project.id">
-        <video muted controls autoplay loop style="width: 300px;">
+        <video muted controls style="width: 300px;">
           <source :src="project.preview"
                   type="video/webm">
         </video>
@@ -30,7 +32,7 @@ name: "Projects",
           title: 'ConsultCal',
           description: 'Senior Capstone project written using JDK 11, OpenJFX, package handling with Maven, and communicating with a MySQL server via JDBC. The application allows secure login, appointment and client creation, read, update, and delete functionality, input validation and error handling, as well as the ability to export appointments and clients to CSV.',
           link: 'https://github.com/ajisakson/ConsultCalMaven',
-          preview: ''
+          preview: require('@/assets/video/ConsultCalEx.webm')
         },
         {
           id: 2,
@@ -71,6 +73,7 @@ button {
 button a {
   text-decoration: none;
   font-weight: bold;
+  color: black;
 }
 
 button img {
@@ -82,10 +85,7 @@ button img {
   border-left: 1px solid #aaa;
   height: 18px;
   float: left;
-  margin-left: 6px;
-  margin-top: 0;
-  margin-bottom: 2px;
-  margin-right: 6px;
+  margin: 0 6px 2px;
 }
 
 .project-title {

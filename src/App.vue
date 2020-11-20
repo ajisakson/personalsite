@@ -1,18 +1,22 @@
 <template>
   <div id="app">
-    <!-- Header /-->
-    <About />
-    <EdCerts />
-    <Skills />
-    <Projects />
-    <Contact />
+    <div id="main">
+      <Projects />
+      <Skills />
+      <EdCerts />
+    </div>
+    <div id="sidebar">
+      <About />
+      <!-- Header /-->
+      <!-- Contact / -->
+    </div>
   </div>
 </template>
 
 <script>
 
 import About from '@/components/About';
-import Contact from '@/components/Contact';
+// import Contact from '@/components/Contact';
 import EdCerts from "@/components/EdCerts";
 //import Header from "@/components/Header";
 import Projects from "@/components/Projects";
@@ -22,7 +26,7 @@ export default {
   name: 'App',
   components: {
     About,
-    Contact,
+    //Contact,
     EdCerts,
     //Header,
     Projects,
@@ -41,7 +45,15 @@ export default {
     max-width: 1000px;
     margin: auto;
   }
-
+  #main {
+    width: 80%;
+    float: right;
+  }
+  #sidebar {
+    width: 250px;
+    float: left;
+    position: fixed;
+  }
   h2 {
     text-align: center;
   }

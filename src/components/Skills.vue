@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Here's What I Can Do</h2>
+    <h2>Skills</h2>
     <div class="skills-list">
       <div class="skill-item" v-for="item in set" v-bind:key="item">
         {{ item }}
