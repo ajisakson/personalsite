@@ -14,7 +14,7 @@ export default {
   name: "Skills",
     data() {
       return {
-        set: ['Java', 'JavaFX MVC', 'MySQL', 'Git', 'HTML', 'CSS', 'JavaScript', 'Gradle', 'Maven', 'Android', 'Linux (Debian)', 'Vue.js', 'C++', 'Python', 'Django']
+        set: ['Java', 'JavaFX MVC', 'MySQL', 'Git', 'HTML', 'CSS', 'JavaScript', 'Gradle', 'Maven', 'Android', 'Linux (Debian)', 'Vue.js', 'C++', 'Python', 'Django', 'Agile', 'Scrum']
       }
     }
 }

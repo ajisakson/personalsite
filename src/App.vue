@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="isDarkMode ? 'darkTheme' : 'lightTheme'">>
     <div id="main">
       <Projects />
       <Skills />
@@ -7,6 +7,7 @@
     </div>
     <div id="sidebar">
       <About />
+      <div><button @click="isDarkMode = !isDarkMode">{{ isDarkMode ? 'Light Mode' : 'Dark Mode'}}</button></div>
       <!-- Header /-->
       <!-- Contact / -->
     </div>
@@ -24,6 +25,11 @@ import Skills from "@/components/Skills";
 
 export default {
   name: 'App',
+  data() {
+    return {
+      isDarkMode: false
+    }
+  },
   components: {
     About,
     //Contact,
@@ -40,7 +46,7 @@ export default {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    color: var(--font-color);
     min-width: 600px;
     max-width: 1000px;
     margin: auto;
@@ -54,8 +60,22 @@ export default {
     float: left;
     position: fixed;
   }
+  .darkTheme {
+    --primary-color: #002366;
+    --secondary-color: #000;
+    --font-color: #fff;
+    --bg-color: #002366 ;
+  }
+  .lightTheme {
+    --primary-color: #fff;
+    --secondary-color: #002366;
+    --font-color: #000;
+    --bg-color: #fff;
+  }
+
   h2 {
     text-align: center;
   }
+
 
 </style>

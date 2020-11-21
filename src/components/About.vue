@@ -13,6 +13,11 @@
       </div>
       <div id="bio">
         <p>{{ bio }}</p>
+
+        <div id="nerd-achievements">
+          <h4>Nerd Achievements:</h4>
+          <p><i>Insert claim to fame here via JS</i></p>
+        </div>
       </div>
     </div>
   </div>
@@ -23,7 +28,8 @@
     name: "About",
     data() {
       return {
-        bio: "My name is Austin. I'm a recently graduated software engineer looking for an entry level position where I can learn and solidify my engineering disciplines while contributing to the organization.",
+        bio: "Hey! Thanks for checking out my virtual résumé! I'm currently looking for a local or remote position where I can continue to develop my skills as a software engineer and gain experience while contributing to the organization's needs. I'm happy to learn new technologies and work in a team environment.",
+        claimstofame: ['Top 50 warlock on biggest realm in WoW','Top 0.5% of players in Teamfight Tactics','Only had to rewatch Arrested Development twice to get all of the jokes','Primary target of impostor kills in Among Us','Captain of high school Varsity Quiz Bowl team','Voluntarily quarantined for years before Covid'],
         picture: require('@/assets/images/cheesin.jpeg'),
         location: 'Post Falls, ID',
         linkedin: 'https://linkedin.com/in/ajisakson/',
@@ -55,6 +61,7 @@
 
 #bio {
   flex: 0 1 250px;
+  font-size: .9em;
 }
 
 </style>

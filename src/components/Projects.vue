@@ -44,7 +44,7 @@ name: "Projects",
         {
           id: 3,
           title: 'GuildMasterBot',
-          description: '',
+          description: 'Currently in the planning phase, Vue.js, DynamoDB, Express.js, Python, event planner for WoW guilds and other Discord communities to plan events and notify members of their Discord server.',
           link: '',
           preview: ''
         },
