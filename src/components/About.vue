@@ -48,6 +48,7 @@
   margin: auto;
   width: 200px;
   border-radius: 50%;
+
 }
 
 #social-links {

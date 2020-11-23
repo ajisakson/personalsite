@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="isDarkMode ? 'darkTheme' : 'lightTheme'">>
+  <div id="app" :class="isDarkMode ? 'darkTheme' : 'lightTheme'" >
     <div id="main">
       <Projects />
       <Skills />
@@ -17,17 +17,17 @@
 <script>
 
 import About from '@/components/About';
-// import Contact from '@/components/Contact';
 import EdCerts from "@/components/EdCerts";
-//import Header from "@/components/Header";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+//import Header from "@/components/Header";
+// import Contact from '@/components/Contact';
 
 export default {
   name: 'App',
   data() {
     return {
-      isDarkMode: false
+      isDarkMode: false,
     }
   },
   components: {
@@ -47,6 +47,7 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: var(--font-color);
+    background-color: var(--bg-color);
     min-width: 600px;
     max-width: 1000px;
     margin: auto;
@@ -61,10 +62,10 @@ export default {
     position: fixed;
   }
   .darkTheme {
-    --primary-color: #002366;
-    --secondary-color: #000;
+    --primary-color: #008080;
+    --secondary-color: #002366;
     --font-color: #fff;
-    --bg-color: #002366 ;
+    --bg-color: #000;
   }
   .lightTheme {
     --primary-color: #fff;
@@ -76,6 +77,5 @@ export default {
   h2 {
     text-align: center;
   }
-
 
 </style>
