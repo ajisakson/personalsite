@@ -1,24 +1,23 @@
 <template>
   <div>
     <h2>Austin Isakson</h2>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-      <div style="flex: 1 1 200px;">
-        <img id="profile-pic" :src="picture" alt="Profile Picture"/>
-        <p style="text-align: center;">{{ location }}</p>
-        <div id="social-links">
-          <a :href="twitter"><img class="social-link" :src="require('@/assets/images/Twitter_Social_Icon_Circle_Color.png')" alt="Twitter link"/></a>
-          <a :href="github"><img class="social-link" :src="require('@/assets/images/GitHub-Mark-32px.png')" alt="GitHub link"/></a>
-          <a :href="linkedin"><img class="social-link" :src="require('@/assets/images/LI-In-Bug.png')" alt="LinkedIn link"/></a>
-        </div>
-      </div>
-      <div id="bio">
-        <p>{{ bio }}</p>
-
-        <div id="nerd-achievements">
-          <h4>Nerd Achievements:</h4>
-          <p><i>Insert claim to fame here via JS</i></p>
-        </div>
-      </div>
+    <div id="profile-pic">
+      <img :src="picture" alt="Profile Picture"/>
+    </div>
+    <div id="location">
+      <p style="display: block; width: 100%; padding-left: 15px;">{{ location }}</p>
+    </div>
+    <div id="social-links">
+      <a :href="twitter"><img class="social-link" :src="require('@/assets/images/Twitter_Social_Icon_Circle_Color.png')" alt="Twitter link"/></a>
+      <a :href="github"><img class="social-link" :src="require('@/assets/images/GitHub-Mark-32px.png')" alt="GitHub link"/></a>
+      <a :href="linkedin"><img class="social-link" :src="require('@/assets/images/LI-In-Bug.png')" alt="LinkedIn link"/></a>
+    </div>
+    <div id="bio">
+      <p>{{ bio }}</p>
+    </div>
+    <div id="nerd-achievements">
+      <h4>Nerd Achievements:</h4>
+      <p><i>Insert claim to fame here via JS</i></p>
     </div>
   </div>
 </template>
@@ -45,24 +44,48 @@
 
 #profile-pic {
   display: block;
-  margin: auto;
+  margin: 0 auto 10px auto;
+  width: 200px;
+}
+
+#profile-pic img {
   width: 200px;
   border-radius: 50%;
+}
 
+#location {
+  display: block;
+  margin: auto;
+  padding: 1px 10px 1px 10px;
+  width: 300px;
+  background-color: var(--primary-color);
 }
 
 #social-links {
   display: block;
+  margin: auto;
+  padding: 0 0 0 20px;
+  width: 300px;
+  background-color: var(--primary-color);
 }
 
 .social-link {
+  display: inline-block;
   width: 32px;
-  margin: 4px;
+  margin: 0 5px 0 5px;
+
 }
 
 #bio {
-  flex: 0 1 250px;
-  font-size: .9em;
+  display: block;
+  background-color: var(--primary-color);
+  padding: 10px 10px 5px 10px;
+  margin: auto;
+  width: 300px;
 }
 
+#nerd-achievements {
+  display: none;
+  background-color: var(--primary-color);
+}
 </style>

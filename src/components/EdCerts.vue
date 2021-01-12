@@ -94,20 +94,31 @@ export default {
 
 <style scoped>
   .school-list {
-    display: flex; flex-wrap: wrap; justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 30px;
   }
   .school-badge {
     flex: 0 1 300px;
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--primary-color);
   }
   .school-badge img {
     width: 300px;
   }
   .cert-list {
-    display: flex; flex-wrap: wrap; justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .cert-badge {
     flex: 0 1 300px;
     text-align: center;
+    padding-top: 20px;
+    margin: 10px;
+    background-color: var(--primary-color);
   }
   .cert-badge img {
     height: 150px;

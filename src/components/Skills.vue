@@ -25,12 +25,12 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 600px;
+    width: 70%;
     margin: auto;
   }
   .skill-item {
-    background: darkcyan;
-    color: white;
+    background: var(--primary-color);
+    color: var(--font-color);
     margin: 7px;
     padding: 8px 10px 8px 10px;
     font-weight: bold;

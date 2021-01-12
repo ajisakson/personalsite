@@ -59,11 +59,14 @@ name: "Projects",
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-left: 20px;
 }
 
 .project{
   flex: 0 1 300px;
-  margin: 0 20px 20px 20px;
+  background-color: var(--primary-color);
+  padding: 20px;
+  margin: 10px;
 }
 
 button {
